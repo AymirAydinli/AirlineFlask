@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <form action="" method="post">
+            {{form.hidden_tag()}}
+            <br>
+                <div class="col">
+                         <label>From:</label>
+                         <br>
+                        {{form.departure(class="custom-select")}}
+                </div>
+
+                <div class="col">
+                         <label>To:</label>
+                         <br>
+                         {{form.arrival(class="custom-select")}}
+                </div>
+            <br>
+
+            <div class="row">
+                <div class="col" style="margin-left:15px">
+
+                            <label>Departure:</label>
+                                {{form.departure_date(class="form-control", type="date", placeholder="dd/mm/yyyy")}}
+                </div>
+                <div class="col" style="margin-right:15px">
+                    <label>Return:</label>
+                                {{form.arrival_date(class="form-control", type="date", placeholder="dd/mm/yyyy")}}
+                </div>
+            </div>
+            <br>
+
+            <div class="col-md">
+                <section>
+                    <div class="input-group-prepend">
+                  <label class="input-group-text">Class:</label>
+                     {{form.class1(class="custom-select")}}
+                    </select>
+                    </div>
+                </section>
+            </div>
+
+            <br>
+            <div class="col-md">
+                <section>
+                    <div class="input-group-prepend">
+                    <label class="input-group-text">Passenger:</label>
+                        {{form.passenger_count(class="custom-select")}}
+                    </div>
+                </section>
+            </div>
+            <br>
+           <div class="form-group">
+
+            {{form.search(class="btn btn-outline-info")}}
+            </div>
+          </form>
+    </div>
+      <div class="border-top pt-3">
+        <small class="text-muted">
+          Need an account? <a class="ml-2" href="{{url_for('login2')}}">Sign in</a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,146 @@
+
+
+        {% extends "layout.html" %}
+        {% block content %}
+        <div class="wrapper fadeInDown" >
+            <div id="formContent">
+                <div class="row">
+                <div class="col-md">
+                    <span class="big bold text-danger ng-binding">Chopin</span>
+                    <span class="ng-binding">{{flights.user2.departure}}</span>
+                    <span class="glyphicon glyphicon-sort" ng-class="{'glyphicon-arrow-right': $ctrl.isOW(), 'glyphicon-sort': !$ctrl.isOW()}"></span>
+                    <span class="big bold text-danger ng-binding">BAK</span>
+                    <span class="ng-binding">{{flights.user2.arrival}}</span>
+                </div>
+                <div class="col-md">
+                    <span class="big bold text-danger ng-binding">{{flights.departure_date}}</span>
+                </div>
+                <div class="col-md">
+                    <span class="m-r-1"><span class="big bold text-danger ng-binding">{{flights.passenger_count}}</span>
+                    <span translate="shared.form.passengerType.adult.count" translate-cloak="" class="ng-scope">Passengers</span></span>
+                     <a class="underlineHover" href="main">New Search</a>
+                </div>
+        </div>
+        <hr>
+        <div class="row">
+              <div class="col-md">
+                     <div>
+                         <p class="route has-addon addon-left md">
+                                <span class="city ng-binding">
+                                    {{flights.user2.departure}}
+                                </span>
+                                <ion-icon name="arrow-dropright-circle"></ion-icon>
+                                <span class="city ng-binding">
+                                    {{flights.user2.arrival}}
+                                </span>
+                         </p>
+                     </div>
+                     <div class="row">
+                         <div class="col-md">
+                             <span class="text-muted ng-scope"><b>Departure Airport</b></span>
+                             <div><i>{{flights.user2.departure}}</i></div>
+                             <div><i>13:00</i></div>
+                         </div>
+                         <div class="col-md">
+                             <ion-icon name="alarm"></ion-icon>
+                             <br>
+                             <span class="text-muted ng-scope"><b>3h 30m</b></span>
+                         </div>
+                         <div class="col-md">
+                             <span class="text-muted ng-scope"><b>Arrival Airport</b></span>
+                             <div><i>{{flights.user2.arrival}}</i></div>
+                             <div><i>19:00</i></div>
+                         </div>
+                         <div class="radio">
+                               <label><input type="radio" name="optradio" checked>{{flights.fare*flights.passenger_count}} $</label>
+                         </div>
+                    </div>
+                    <hr>
+                 <div class="row">
+                         <div class="col-md">
+                             <span class="text-muted ng-scope"><b>Departure Airport</b></span>
+                             <div><i>{{flights.user2.departure}}</i></div>
+                             <div><i>13:00</i></div>
+                         </div>
+                         <div class="col-md">
+                             <ion-icon name="alarm"></ion-icon>
+                             <br>
+                             <span class="text-muted ng-scope"><b>3h 30m</b></span>
+                         </div>
+                         <div class="col-md">
+                             <span class="text-muted ng-scope"><b>Arrival Airport</b></span>
+                             <div><i>{{flights.user2.arrival}}</i></div>
+                             <div><i>19:00</i></div>
+                         </div>
+                         <div class="radio">
+                               <label><input type="radio" name="optradio" checked>{{flights.fare*flights.passenger_count}} $</label>
+                         </div>
+                    </div>
+             </div>
+        </div>
+        <br>
+           <br>
+        <br>
+        <div class="row">
+             <div class="col-md">
+                     <div>
+                         <p class="route has-addon addon-left md">
+                                <span class="city ng-binding">
+                                    {{flights.user2.departure}}
+                                </span>
+                                <ion-icon name="arrow-dropleft-circle"></ion-icon>
+                                <span class="city ng-binding">
+                                    {{flights.user2.arrival}}
+                                </span>
+                         </p>
+                     </div>
+                     <div class="row">
+                         <div class="col-md">
+                             <span class="text-muted ng-scope"><b>Departure Airport</b></span>
+                             <div><i>{{flights.user2.departure}}</i></div>
+                             <div><i>13:00</i></div>
+                         </div>
+                         <div class="col-md">
+                             <ion-icon name="alarm"></ion-icon>
+                             <br>
+                             <span class="text-muted ng-scope"><b>3h 30m</b></span>
+                         </div>
+                         <div class="col-md">
+                             <span class="text-muted ng-scope"><b>Arrival Airport</b></span>
+                             <div><i>{{flights.user2.arrival}}</i></div>
+                             <div><i>19:00</i></div>
+                         </div>
+                         <div class="radio">
+                               <label><input type="radio" name="optradio" checked>{{flights.fare*flights.passenger_count}} $</label>
+                         </div>
+                    </div>
+                    <hr>
+                 <div class="row">
+                         <div class="col-md">
+                             <span class="text-muted ng-scope"><b>Departure Airport</b></span>
+                             <div><i>{{flights.user2.departure}}</i></div>
+                             <div><i>13:00</i></div>
+                         </div>
+                         <div class="col-md">
+                             <ion-icon name="alarm"></ion-icon>
+                             <br>
+                             <span class="text-muted ng-scope"><b>3h 30m</b></span>
+                         </div>
+                         <div class="col-md">
+                             <span class="text-muted ng-scope"><b>Arrival Airport</b></span>
+                             <div><i>{{flights.user2.arrival}}</i></div>
+                             <div><i>19:00</i></div>
+                         </div>
+                         <div class="radio">
+                               <label><input type="radio" name="optradio" checked>{{flights.fare*flights.passenger_count}} $</label>
+                         </div>
+                    </div>
+             </div>
+        </div>
+                <hr>
+        <div id="formFooter">
+            <a class="underlineHover" href="{{url_for('ticket')}}">Confirm</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

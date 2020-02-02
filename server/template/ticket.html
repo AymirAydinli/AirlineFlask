@@ -1,0 +1,109 @@
+  {%extends "layout.html"%}
+  {% block content %}
+<div class="wrapper fadeInDown" >
+    <div id="formContent">
+            <div align="left" style="margin-left:10px">
+                <p><b><span translate="shared.form.pnr.label" translate-cloak="" class="ng-scope">Booking reference</span>:</b> <span class="text-primary-light ng-binding">DBCPG</span></p>
+            </div>
+            <hr>
+            <div align="left" style="margin-left:10px">
+                <p class="bold ng-binding">
+                    <span class="text-muted ng-scope">Email</span>:{{f.user1.email}}
+                </p>
+            </div>
+            <hr>
+            <div align="left" style="margin-left:10px">
+                  <span class="text-muted ng-scope">Passengers</span> {{f.passenger_count}}
+            </div>
+        <hr>
+        <div class="row">
+                <div class="col-md" align="left" style="margin-left:10px">
+                    <div><span class="text-muted ng-scope">Passenger</span></div>
+                    <div>{{f.user1.first_name}} {{f.user1.last_name}}</div>
+                </div>
+                <div class="col-md" align="left" style="margin-left:10px">
+                    <div><span class="text-muted ng-scope">Date of birth</span></div>
+                   <div>{{f.user1.dateOfBirth}}</div>
+                </div>
+                <div class="col-md" align="left" style="margin-left:10px">
+                    <div><span class="text-muted ng-scope">Document</span></div>
+                    <div>{{f.user1.document_number}}</div>
+                </div>
+        </div>
+        <hr>
+        <div align="left" style="margin-left:10px">
+            <span class="text-muted ng-scope">Flights</span>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md" align="left" style="margin-left:10px">
+                 <div>
+                     <span class="text-muted ng-scope">Departure Airport</span>
+                 </div>
+                 <div>{{f.user2.departure}}</div>
+            </div>
+            <div class="col-md" align="left" style="margin-left:10px">
+                <div>
+                    <span class="text-muted ng-scope">Arrival Airport</span>
+                </div>
+                <div>{{f.user2.arrival}}</div>
+            </div>
+            <div class="col-md" align="left" style="margin-left:10px">
+                <div>
+                    <span class="text-muted ng-scope">Departure Date</span>
+                </div>
+                <div>{{f.departure_date}} - 15:00</div>
+            </div>
+            <div class="col-md" align="left" style="margin-left:10px">
+                <div>
+                    <span class="text-muted ng-scope">Return Date</span>
+                </div>
+                <div>{{f.arrival_date}} - 14:00</div>
+            </div>
+            <div class="col-md" align="left" style="margin-left:10px">
+                <div>
+                    <span class="text-muted ng-scope">Flight</span>
+                </div>
+                <div>J1203912</div>
+            </div>
+        </div>
+        <hr>
+        <div align="left" style="margin-left:10px">
+            <span class="text-muted ng-scope">Fares</span>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md" align="left" style="margin-left:10px">
+                 <div>
+                     <span class="text-muted ng-scope">Fare</span>
+                 </div>
+                 <div>{{f.fare * f.passenger_count}} USD</div>
+            </div>
+            <div class="col-md" align="left" style="margin-left:10px">
+                <div>
+                    <span class="text-muted ng-scope">Taxes & Charges</span>
+                </div>
+                <div>10.00 USD</div>
+            </div>
+            <div class="col-md" align="left" style="margin-left:10px">
+                <div>
+                    <span class="text-muted ng-scope">Passengers</span>
+                </div>
+                <div><ion-icon name="man"></ion-icon>Adult:{{f.passenger_count}}</div>
+            </div>
+            <div class="col-md" align="left" style="margin-left:10px">
+                <div>
+                    <span class="text-muted ng-scope">Summary</span>
+                </div>
+                <div>{{f.fare * f.passenger_count + 10}} $</div>
+            </div>
+        </div>
+        <hr>
+         <div class="border-top pt-3">
+        <small class="text-muted">
+          Need to logout? <a class="ml-2" href="{{url_for('logout')}}">Log Out</a>
+        </small>
+    </div>
+    </div>
+</div>
+  {% endblock content %}
