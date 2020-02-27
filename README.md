@@ -7,3 +7,15 @@ flask-bcrypt
 flask-wtforms
 PYCHARM IDE
 
+
+![](images/Available.png)
+
+![](images/Login.png)
+
+![](images/Register1.png)
+
+![](images/Register2.png)
+
+![](images/Search.png)
+
+![](images/Ticket.png)
